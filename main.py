@@ -1,8 +1,19 @@
+"""
+Submission work2 of
+Chaya Mizrachi,  ID: 214102584
+Yael Siman-Tov, ID:325181295
+Linoy Nisim Pur, ID: 324029685
+Part of Functions from lihiSabag https://github.com/lihiSabag/Numerical-Analysis-2023.git
+
+GitHub Repo https://github.com/YaelSimanTov/Analiza-Work-2.git
+
+"""
+
+
+
+
 import numpy as np
 from numpy.linalg import norm
-
-
-
 
 """
 Performs Jacobi iterations to solve the line system of equations, Ax=b, 
