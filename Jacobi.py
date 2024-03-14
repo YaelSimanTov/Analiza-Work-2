@@ -1,3 +1,17 @@
+"""
+Submission work2 of
+Chaya Mizrachi,  ID: 214102584
+Yael Siman-Tov, ID:325181295
+Linoy Nisim Pur, ID: 324029685
+Part of Functions from lihiSabag https://github.com/lihiSabag/Numerical-Analysis-2023.git
+
+GitHub Repo https://github.com/YaelSimanTov/Analiza-Work-2.git
+
+"""
+
+
+
+
 import numpy as np
 from numpy.linalg import norm
 
@@ -32,6 +46,8 @@ def jacobi_iterative(A, b, X0, TOL=1e-16, N=200):
 
     if is_diagonally_dominant(A):
         print('Matrix is diagonally dominant - preforming jacobi algorithm\n')
+    else:
+        print('Matrix is not diagonally dominant')
 
     print( "Iteration" + "\t\t\t".join([" {:>12}".format(var) for var in ["x{}".format(i) for i in range(1, len(A) + 1)]]))
     print("-----------------------------------------------------------------------------------------------")
@@ -61,14 +77,8 @@ if __name__ == "__main__":
     A = np.array([[3, -1, 1], [0, 1, -1], [1, 1, -2]])
     b = np.array([4, -1, -3])
 
-    B = np.array([[4, 2, 0], [2, 10, 4], [0, 4, 5]])
-    c = np.array([2, 6, 5])
+    x = np.zeros_like(b, dtype=np.double)
+    solution = jacobi_iterative(A, b, x)
 
-'''
- x = np.zeros_like(b, dtype=np.double)
- solution = jacobi_iterative(A, b, x)
-'''
-x = np.zeros_like(c, dtype=np.double)
-solution = jacobi_iterative(B, c, x)
 
-print(bcolors.OKBLUE, "\nApproximate solution:", solution)
+    print(bcolors.OKBLUE, "\nApproximate solution:", solution)

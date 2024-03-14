@@ -41,13 +41,10 @@ if __name__ == '__main__':
     A = np.array([[3, -1, 1], [0, 1, -1], [1, 1, -2]])
     b = np.array([4, -1, -3])
 
-    B = np.array([[4, 2, 0], [2, 10, 4], [0, 4, 5]])
-    c = np.array([2, 6, 5])
 
     X0 = np.zeros_like(b)
 
-    '''solution =gauss_seidel(A, b, X0)'''
-    solution =gauss_seidel(B, c, X0)
+    solution =gauss_seidel(A, b, X0)
 
 
     print(bcolors.OKBLUE,"\nApproximate solution:", solution)
